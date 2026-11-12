@@ -43,12 +43,11 @@ def check_contour(req_img):
         else:
            # print('the asvd image is: '+saved_img)
             contour0=get_img_contour(saved_img)#saved_img is the name of the image stored in the img_dict.
-            if cv2.matchShapes(contour1, contour0,cv2.CONTOURS_MATCH_I1,0.0)<0.5:
+            if cv2.matchShapes(contour1, contour0,cv2.CONTOURS_MATCH_I1, 0.0)<0.5:
                 print(f'the shape is most likely {name}')
                 counter+=1
             else:
                 print('---') 
     if counter==0:
-        print('Unable to determine the component')
-       
+        print('Unable to determine the component type' 
 check_contour(req_img)
