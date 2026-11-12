@@ -31,7 +31,7 @@ def check_contour(req_img):
             break
         if isinstance(saved_img,dict):
             #print('the printed is: '+renewed_storage.image_dict[name][saved_img2])
-            for second_name,saved_img2 in renewed_storage.image_dict.img_dict[name].items():
+            for second_name,saved_img2 in saved_img.items():
                 if counter==1:
                     break
                 contour_2=get_img_contour(str(saved_img2))
